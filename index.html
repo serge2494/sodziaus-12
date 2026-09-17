@@ -5,9 +5,165 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex,nofollow">
   <title>Sodžiaus g. 12</title>
+  <style>
+    :root { --navy:#1f4e79; --ink:#1a1a1a; --muted:#5b6570; --line:#d9dee5; --bg:#f6f3ee; --card:#fff; --you:#e7f3ea; --miss:#fff3cc; --west:#f4e6d4; }
+    * { box-sizing: border-box; }
+    body { margin:0; font:16px/1.45 "Segoe UI",system-ui,sans-serif; color:var(--ink); background:var(--bg); }
+    header { background:var(--navy); color:#fff; padding:28px 20px 24px; }
+    header .wrap, main, footer .wrap { max-width:980px; margin:0 auto; }
+    header h1 { margin:0 0 6px; font-size:1.5rem; }
+    header p { margin:0; opacity:.92; }
+    nav { background:#163a5c; position:sticky; top:0; }
+    nav .wrap { max-width:980px; margin:0 auto; display:flex; flex-wrap:wrap; }
+    nav a { color:#fff; text-decoration:none; padding:10px 12px; font-size:.9rem; }
+    main { padding:22px 20px 60px; }
+    h2 { margin:28px 0 10px; color:var(--navy); border-bottom:2px solid var(--navy); padding-bottom:6px; font-size:1.15rem; }
+    .lead, .card { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:14px 16px; }
+    .street { display:grid; grid-template-columns:repeat(4,1fr); gap:8px; }
+    .lot { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:10px 12px; }
+    .lot.you { background:var(--you); }
+    .lot.west { background:var(--west); }
+    .lot .num { font-weight:700; color:var(--navy); }
+    .lot .who { font-size:.85rem; color:var(--muted); }
+    table { width:100%; border-collapse:collapse; background:var(--card); font-size:.93rem; }
+    th,td { border:1px solid var(--line); padding:8px 10px; vertical-align:top; text-align:left; }
+    th { background:var(--navy); color:#fff; }
+    .cards { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+    .miss { background:var(--miss); }
+    .note { color:var(--muted); font-size:.9rem; }
+    a { color:#2e75b6; }
+    footer { background:#e8e2d8; padding:16px 20px; font-size:.85rem; color:var(--muted); }
+    #gate { min-height:100vh; display:flex; align-items:center; justify-content:center; background:#1f4e79; padding:24px; }
+    #gate form { background:#fff; padding:28px; border-radius:12px; width:min(360px,100%); text-align:center; }
+    #gate input { width:100%; padding:12px; margin:12px 0; font-size:16px; }
+    #gate button { width:100%; padding:12px; background:#2e7d32; color:#fff; border:0; font-weight:700; cursor:pointer; }
+    #err { color:#b00020; min-height:1.2em; font-size:.9rem; }
+    @media (max-width:800px){ .street,.cards{grid-template-columns:1fr 1fr;} }
+    @media (max-width:520px){ .street,.cards{grid-template-columns:1fr;} }
+  </style>
 </head>
 <body>
-<p>Loading brief… If you see this, open the full page after Pages is enabled.</p>
-<script>location.replace('./brief.html');</script>
+<div id="gate">
+  <form id="f">
+    <p style="margin:0 0 6px;font-weight:700;color:#1f4e79">Sodžiaus g. 12</p>
+    <p style="margin:0;color:#5b6570;font-size:.95rem">Family brief. Ask Serge or Jurij for the password.</p>
+    <input id="pw" type="password" placeholder="Password" autofocus>
+    <div id="err"></div>
+    <button type="submit">Open brief</button>
+  </form>
+</div>
+<div id="app" hidden>
+  <header><div class="wrap">
+    <h1>Sodžiaus g. 12, Trakai</h1>
+    <p>Private project brief · garden plot house · 17 Sep 2026</p>
+  </div></header>
+  <nav><div class="wrap">
+    <a href="#story">Story</a><a href="#street">Street</a><a href="#options">Options</a>
+    <a href="#people">People</a><a href="#rules">Rules</a><a href="#ids">Numbers</a>
+    <a href="#maps">Maps</a><a href="#missing">Missing</a>
+  </div></nav>
+  <main>
+    <section id="story">
+      <h2>1. The story</h2>
+      <p class="lead">Serge lives in the USA and wants to build a house on a garden plot in Trakai. The land is in his brother <strong>Jurij Zelenov’s</strong> name — a US resident cannot own this type of plot. Jurij lives one minute away. Two neighbors decide how wide the house can be.</p>
+      <p>The lot is about <strong>10.5 m wide and 67 m long</strong> (7.01 ares). Default rule: stay <strong>3 m from each neighbor</strong>. That leaves a house about <strong>4.5 m wide</strong> unless a neighbor signs written consent or land is bought or swapped. Design the 4.5 m house first.</p>
+    </section>
+    <section id="street">
+      <h2>2. The street — west to east</h2>
+      <div class="street">
+        <div class="lot west"><div class="num">Sodžiaus g. 16</div><div class="who">Neighbor 2 · house</div><p>8.05 a · 13.0 × 62 m<br>Not your fence</p></div>
+        <div class="lot west"><div class="num">Sodžiaus g. 14</div><div class="who">Neighbor 2 · empty</div><p>5.13 a · 8.0 × 64 m<br><strong>Your west fence</strong></p></div>
+        <div class="lot you"><div class="num">Sodžiaus g. 12</div><div class="who">Yours · Jurij owns it</div><p>7.01 a · 10.5 × 67 m<br>House goes here</p></div>
+        <div class="lot"><div class="num">Sodžiaus g. 10</div><div class="who">Neighbor 1 · empty</div><p>7.40 a · 10.6 × 70 m<br><strong>Your east fence</strong></p></div>
+      </div>
+      <p class="note">Neighbor 2 owns both 14 and 16. Confirm names on paid RC extracts.</p>
+    </section>
+    <section id="options">
+      <h2>3. What can happen</h2>
+      <table>
+        <tr><th>If this happens</th><th>House / lot</th><th>Who must agree</th></tr>
+        <tr><td><strong>A. Buy all of #10</strong></td><td>~21 × 68 m (14.41 a)</td><td>Owner of #10 + notary + surveyor</td></tr>
+        <tr><td><strong>B. Square-swap with #10</strong></td><td>Both ~14 × 50 m</td><td>Owner of #10 + surveyor</td></tr>
+        <tr><td><strong>C. West trade + €10,000</strong></td><td>Wider on the west. He already has 13.18 a and a house on #16. Messy.</td><td>Owner of #14 and #16</td></tr>
+        <tr><td><strong>D. Both sides allow 1 m</strong></td><td>House ~8.5 m wide</td><td>Written consent both long sides</td></tr>
+        <tr><td><strong>E. One side allows 1 m</strong></td><td>House ~6.5 m wide</td><td>That one owner</td></tr>
+        <tr><td><strong>F. Nobody agrees</strong></td><td>House ~4.5 m, or garden house 50 m² / 5 m. Cap ~234 m² footprint / ~280 m² floors</td><td>Nobody. Backup plan.</td></tr>
+      </table>
+      <p class="note">Talk #10 about A or B. Talk #14/#16 about D first.</p>
+    </section>
+    <section id="people">
+      <h2>4. People</h2>
+      <div class="cards">
+        <div class="card"><strong>Serge (USA)</strong><br>serge2494@gmail.com<br>WhatsApp +1 267 494 2494<br>LT +370 700 76 477 (rings US phone)</div>
+        <div class="card"><strong>Jurij Zelenov</strong><br>+370 612 60662<br>Žvejų g. 6, Trakai<br>Company mail agrodetales@inbox.lt</div>
+        <div class="card"><strong>Dmitrijus Zelenovas</strong><br>Nephew. Phone still missing.</div>
+        <div class="card"><strong>Mantas Petraitis</strong><br>Friend. Phone still missing.</div>
+        <div class="card"><strong>Zenia Kozlova</strong><br>SB board. Žvejų g. 5. Phone still missing.</div>
+        <div class="card"><strong>SB Sodzius</strong><br>+370 652 37512<br>info@sbsodzius.lt<br>Aušros g. 11</div>
+      </div>
+      <p class="note">Teisininkas option: Nerijus Panasiukas — temidy.lt/teisininkas/nerijus-panasiukas</p>
+      <p><strong>Jurij first:</strong> 1) RC extracts for #10 #14 #16. 2) Authority for Dmitrijus or Mantas. 3) Letter to #10. 4) Letter to #14/#16 owner.</p>
+    </section>
+    <section id="rules">
+      <h2>5. Rules on this plot</h2>
+      <table>
+        <tr><th>Topic</th><th>On #12</th></tr>
+        <tr><td>Community</td><td>SB Sodzius garden plot. One-family house allowed without changing land purpose.</td></tr>
+        <tr><td>TINP</td><td>None.</td></tr>
+        <tr><td>Min plot to build</td><td>4 ares. This lot is 7.01 a — OK.</td></tr>
+        <tr><td>Max footprint / floors</td><td>~234 m² ground / ~280 m² all floors. Height 8.5 m.</td></tr>
+        <tr><td>Garden house</td><td>≤50 m² and 5 m — no full permit. Setbacks still apply.</td></tr>
+        <tr><td>Setback</td><td>3 m unless registered owner signs written consent. Ask 1 m.</td></tr>
+        <tr><td>Fire gap</td><td>Separate rule. Measure to the house on #16.</td></tr>
+        <tr><td>Permit name</td><td>Jurij is the applicant. Serge cannot be builder of record.</td></tr>
+      </table>
+    </section>
+    <section id="ids">
+      <h2>6. Official numbers</h2>
+      <table>
+        <tr><th>Lot</th><th>Size</th><th>Registry</th></tr>
+        <tr><td>12 yours</td><td>7.01 a · 10.5 × 67 m</td><td>79/11359 · 7984-0002-0293 · 175-103-204</td></tr>
+        <tr><td>10 east</td><td>7.40 a · 10.6 × 70 m</td><td>79/2617 · 7984-0002-0004 · 175-103-185</td></tr>
+        <tr><td>14 west fence</td><td>5.13 a · 8.0 × 64 m</td><td>7984-0002-0054 · 175-103-921</td></tr>
+        <tr><td>16 west house</td><td>8.05 a · 13.0 × 62 m</td><td>79/11564 · 7984-0002-0295 · building 7999-7012-1010 · 175-103-974</td></tr>
+      </table>
+    </section>
+    <section id="maps">
+      <h2>7. Maps</h2>
+      <p><a href="https://www.google.com/maps/dir/Sodžiaus+g.+10,+Trakai/54.62246,24.89642/Sodžiaus+g.+14,+Trakai/Sodžiaus+g.+16,+Trakai/Žvejų+g.+6,+Trakai/@54.6224832,24.8959092,112m/data=!3m1!1e3">Google Maps — five pins</a></p>
+    </section>
+    <section id="missing">
+      <h2>8. Still missing</h2>
+      <table>
+        <tr><th>Missing</th><th>Who</th></tr>
+        <tr><td class="miss">Owner names of #10, #14, #16</td><td>Jurij — paid RC extracts</td></tr>
+        <tr><td class="miss">Phones for Dmitrijus, Mantas, Zenia</td><td>Jurij / SB office</td></tr>
+        <tr><td class="miss">Written consents</td><td>Jurij + helper</td></tr>
+        <tr><td class="miss">Site photos</td><td>Dmitrijus or Mantas</td></tr>
+      </table>
+    </section>
+  </main>
+  <footer><div class="wrap">Private family brief. Send the password separately from this link.</div></footer>
+</div>
+<script>
+const HASH = "1b0dee9416b1466fac4edb43974d7301656604c15249b1ae4cd3651f29395da5";
+async function sha(s){
+  const b = new TextEncoder().encode(s);
+  const buf = await crypto.subtle.digest("SHA-256", b);
+  return [...new Uint8Array(buf)].map(x => x.toString(16).padStart(2,"0")).join("");
+}
+document.getElementById("f").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const ok = (await sha(document.getElementById("pw").value)) === HASH;
+  if (!ok) { document.getElementById("err").textContent = "Wrong password"; return; }
+  sessionStorage.setItem("s12ok","1");
+  document.getElementById("gate").hidden = true;
+  document.getElementById("app").hidden = false;
+});
+if (sessionStorage.getItem("s12ok") === "1") {
+  document.getElementById("gate").hidden = true;
+  document.getElementById("app").hidden = false;
+}
+</script>
 </body>
 </html>
